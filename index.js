@@ -1,15 +1,17 @@
-function iterativeLog(array){
-  array.forEach(element => console.log(element))
+function iterativeLog(array) {
+  array.forEach((el, i) => {
+    console.log(`${i}: ${el}`)
+  })
 }
 
-
-function iterate(callback){
-
+function iterate(callback) {
+  const evens = [2, 4, 6, 8]
+  evens.forEach(callback)
+  return evens
 }
 
-
-function doToArray(array, callback){
-
+function doToArray(array, callback) {
+  array.forEach((x) => callback(x))
 }
 
 
